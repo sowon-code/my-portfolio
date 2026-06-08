@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Container, Button, Stack } from '@mui/material';
+import { AppBar, Toolbar, Container, Button, Stack, Typography } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 
 const navItems = [
@@ -11,7 +11,20 @@ function Navigation() {
   return (
     <AppBar position="sticky" color="primary" elevation={0}>
       <Container maxWidth="md">
-        <Toolbar disableGutters sx={{ justifyContent: 'center' }}>
+        <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
+          <Typography
+            component={NavLink}
+            to="/"
+            variant="h6"
+            sx={{
+              fontWeight: 700,
+              letterSpacing: '0.5px',
+              color: 'primary.contrastText',
+              textDecoration: 'none',
+            }}
+          >
+            ✦ My Portfolio
+          </Typography>
           <Stack direction="row" spacing={1}>
             {navItems.map((item) => (
               <Button
