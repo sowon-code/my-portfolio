@@ -67,7 +67,7 @@ function GuestbookForm({
   };
 
   return (
-    <Box component="form" onSubmit={handleSubmit}>
+    <Box component="form" onSubmit={handleSubmit} noValidate>
       {mode === 'create' && (
         <Typography variant="h6" sx={{ fontWeight: 700, color: 'primary.main', mb: 2 }}>
           방명록 남기기
