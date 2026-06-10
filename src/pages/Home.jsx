@@ -1,5 +1,6 @@
 import { Box } from '@mui/material';
 import Section from '../components/Section';
+import ContactSection from '../components/contact/ContactSection';
 
 const sections = [
   {
@@ -26,13 +27,6 @@ const sections = [
       "여기는 Projects 섹션입니다. 대표작 썸네일 3-4개와 '더 보기' 버튼이 들어갈 예정입니다.",
     background: 'paper',
   },
-  {
-    title: 'Contact',
-    description:
-      '여기는 Contact 섹션입니다. 연락처, SNS, 간단한 메시지 폼이 들어갈 예정입니다.',
-    background: 'default',
-    accent: true,
-  },
 ];
 
 function Home() {
@@ -41,6 +35,7 @@ function Home() {
       {sections.map((section) => (
         <Section key={section.title} {...section} />
       ))}
+      <ContactSection />
     </Box>
   );
 }
